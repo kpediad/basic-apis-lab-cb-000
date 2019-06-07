@@ -21,6 +21,7 @@ class RepositoriesController < ApplicationController
     rescue Faraday::ConnectionFailed
       @error = "There was a timeout. Please try again."
     end
+    render 'search'
   end
 
 end
