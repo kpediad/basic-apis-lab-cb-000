@@ -14,7 +14,6 @@ class RepositoriesController < ApplicationController
       body = JSON.parse(@resp.body)
       if @resp.success?
         @items = body["items"]
-        byebug
       else
         @error = body["meta"]["errorDetail"]
       end
